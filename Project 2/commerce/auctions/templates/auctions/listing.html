@@ -1,0 +1,100 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h2>Listing: {{ listing.item_name }}</h2>
+
+    <div class="page-image-container">
+        <img class="listing-img" src="{{ listing.image_url }}">
+    </div>
+
+    <p> {{ listing.item_description }}</p>
+
+    <div>
+        <h4>Starting Bid: ${{ listing.starting_bid }}</h4>
+        <h4>Current Bid: ${{ price }}</h4>
+    </div>
+    {% if error %}
+    <li>{{ error }}</li>
+    {% endif %}
+    
+    <div class="bid_form">
+        {% if user.is_authenticated %}
+        <form class="bid_form" action="{% url 'listing' listing.id %}" method="post">
+            {% csrf_token %}
+              {{ bid }}
+            <button class="bid_button" type="submit">Submit Bid</button>
+          </form>
+        {% endif %}
+    </div>
+
+    <div class="comment_form">
+        {% if user.is_authenticated %}
+            {% if listing in profile.watch_list.all %}
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" name="remove_from_watchlist">Remove from Watchlist</button>
+                </form>
+            {% else %}
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" name="add_to_watchlist">Add to Watchlist</button>
+                </form>
+            {% endif %}
+            {% if user == listing.author %}
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" name="delete_listing">Delete Listing</button>
+                </form>
+            {% endif %}
+        {% endif %}
+        
+    </div>
+    
+
+    <div>
+        <h4>Details:</h4>
+
+        <ul>
+            <li>Created By: <strong>{{ listing.author }}</strong></li>
+            <li>Created On: <strong>{{ listing.created_at }}</strong></li>
+
+            {% if user == leading %}
+            <li>{{ nobids }} bid(s) so far. <strong>You are leading!</strong></li>
+            {% else %}
+            <li>{{ nobids }} bid(s) so far.</li>
+            {% endif %}
+
+            
+            {% if leading %}
+            <li>Current Highest Bidder: <strong>{{ leading }}</strong></li>
+            {% endif %}
+        </ul>
+    </div>
+
+    <div>
+        <h4>Comments:</h4>
+
+        {% if user.is_authenticated %}
+        <div >
+            <form class="comment_form" action="{% url 'listing' listing.id %}" method="post">
+                {% csrf_token %}
+                {{ comment }}
+                <button type="submit">Submit Comment</button>
+            </form>
+        </div>
+        {% endif %}
+
+        {% for comment in comments %}
+            <div>
+                <strong>{{ comment.author }}</strong>
+                <p>{{ comment.content }}</p>
+            </div>
+        {% endfor %}
+        
+    </div>
+
+    
+
+
+
+{% endblock %}
