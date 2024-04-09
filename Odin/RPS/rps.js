@@ -1,4 +1,4 @@
-let choices = ["rock", "paper", "scissors"];
+const choices = ["rock", "paper", "scissors"];
 
 function getComputerChoice() {
     const index = Math.floor(Math.random() * choices.length);
@@ -29,7 +29,15 @@ function playGame() {
     let playerScore = 0, computerScore = 0;
 
     for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt("Rock, Paper, or Scissors?");
+        let playerSelection;
+        while(true) {
+            playerSelection = prompt("Rock, Paper, or Scissors?");
+            if (choices.includes(playerSelection)) {
+                break;
+            }
+            console.log("Please give valid Input")
+        }
+       
         const round = playRound(playerSelection,getComputerChoice());
 
         console.log(round);
