@@ -1,0 +1,66 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+button {
+    margin: 5px;
+}
+
+#calculator {
+    width: 460px;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    border: 4px black solid;
+}
+
+
+#calc-display {
+    margin-top: 20px;
+    border: 3px black solid;
+    width: 380px;
+    height: 80px;
+    font-size: 45px;
+    text-align: right;
+    align-content: center;
+    padding: 10px;
+}
+#calc-buttons {
+    display: flex;
+    gap: 5px;
+    margin: 8px;
+}
+#calc-number-zero, #calc-operator-clear {
+    width: 300px;
+}
+
+#calc-numbers {
+    width: 308px;
+    
+    
+    /* gap: 6px; */
+}
+
+#calc-operators {
+    width: 100px;
+    gap: 6px;
+}
+
+.number, .operator {
+    width: 90px;
+    height: 70px;
+    font-size: 24px;
+    padding: 6px;
+}
+
+.active {
+    background-color: bisque;
+}
