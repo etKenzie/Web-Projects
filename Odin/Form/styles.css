@@ -1,0 +1,126 @@
+@import url('https://fonts.cdnfonts.com/css/norse');
+
+:root {
+    --main-bg-color: rgb(255, 255, 255);
+    --main-text-color: rgb(0, 0, 0);
+}
+body{
+    display: flex;
+}
+html, body {
+    background-color: rgb(249, 249, 249);
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#flower {
+    width: 36vw;
+    height: auto;
+}
+
+#input-section {
+    display: flex;
+    flex-direction: column;
+    width: 64vw;
+}
+
+#intro {
+    padding: 35px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    
+}
+
+.form-group {
+    font-size: 1.0rem;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+}
+#title {
+    padding: 0 20px
+}
+  
+#form {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+label {
+    margin-bottom: 5px;
+}
+
+#logo {
+    display: flex;
+    font-family: "Norse";
+    color: white;
+    font-size: 8rem;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 14vw;
+    left: 0;
+    width: 36vw;
+    height: 13vw;
+    background-color: rgba(0, 0, 0, 0.524);
+    gap: 30px;
+}
+
+#logo-img {
+    height: 90%;
+}
+
+input {
+    width: 90%;
+    height: 1.6vw
+}
+
+#button-account {
+    margin-bottom: 20px;
+    width: 5vm;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #596D48;
+    color: white;
+}
+
+#create-account {
+    display: flex;
+    flex-direction: column;
+    padding: 35px 50px;
+    align-self: flex-start;
+}
+
+a {
+    text-decoration: none;
+    color:#596D48;
+}
+a:visited {
+    text-decoration: none;
+}
+
+.invalid {
+    border: 1px solid red;
+}
+
+input:focus {
+    border: rgb(61, 61, 234) solid 3px;
+}
