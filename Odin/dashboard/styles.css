@@ -1,0 +1,275 @@
+/* * {
+    border: 1px solid black;
+} */
+
+#container {
+    --main-bg-color: rgba(0, 129, 209, 0.801);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+#container {
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+}
+
+.main {
+    display: grid;
+    grid-template-rows: 180px 1fr;
+
+}
+
+/* Side Bar */
+
+.sidebar {
+    background-color: var(--main-bg-color);
+    /* display: grid;
+    grid-template-rows: 75px 1fr 2fr; */
+    color: #f8fafc;
+
+    display:flex;
+    flex-direction: column;
+    gap: 25px;
+    
+}
+
+#sidebar-title {
+    margin: 20px
+}
+
+.sidebar-list {
+    font-size: larger;
+    gap: 10px
+}
+.sidebar-list {
+    font-size: larger;
+}
+
+.sidebar-list li {
+    margin-bottom: 12px
+}
+
+.heading {
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1.4fr;
+}
+
+/* Search Bar */
+
+.search-bar {
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+    margin: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 6px;
+    border: none;
+    font-size: 12px;
+    border-radius: 24px;
+    background-color: #dfdfdf;
+}
+
+.empty-button { 
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+
+
+/* Profile */
+
+.icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr
+}
+
+.profile-img {
+    margin: 12px;
+}
+
+.circle {
+    height: 50px;
+    width: 50px;
+    background-color: #bbb;
+    border-radius: 50%;
+}
+
+.big-circle {
+    height: 75px;
+    width: 75px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin-left: 45px;
+
+}
+
+.username {
+    display:flex;
+    margin-left: 10px;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+
+.content {
+    background-color: rgb(207, 207, 207);
+}
+
+.fa-home {
+    margin-left: 14px;
+    margin-top: 8px;
+    font-size: 24px;
+}
+
+.user-info {
+    /* background-color: green; */
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.user-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-intro {
+    font-weight: bolder;
+    font-size: 14px;
+}
+
+.display-name {
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.heading-actions {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center; */
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.action-button {
+    font-size: 14px;
+    height: 38px;
+    width: 90px;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--main-bg-color);
+    border: none;
+}
+
+
+/* Projects */
+
+.content {
+    display: grid;
+    grid-template-columns: 2.4fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+}
+
+
+.projects-viewbox {
+    grid-row: 1 / 3;
+    margin: 25px 20px;
+    font-weight: bold;
+}
+
+.projects-container {
+    
+    /* background-color: green; */
+    gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.project-container {
+    padding: 15px;
+    height: 35vh;
+    width: 55vh;
+    background-color: white;
+    display: grid;
+    border-radius: 8px;
+}
+
+.announcements {
+    font-weight: bold;
+    margin-top: 25px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.announcements-container {
+    font-size: small;
+    height: 52vh;
+    background-color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 7px;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.announcement-description, .project-description {
+    font-weight: 400;
+}
+
+.trending {
+    font-weight: bold;
+    margin-top: 20px;
+    margin-right: 25px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.trending-container {
+    font-size: small;
+    height: 50vh;
+    background-color: white;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    overflow-y: auto;
+}
+
+.trending-element {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    /* grid-template-rows: 1fr 1fr;; */
+    gap: 10px;
+    align-items: center;
+}
+
+.trending-info {
+    margin-top: 10px;
+}
+
+.trending-picture {
+    grid-row: 1/3;
+}
+
+
+
+
