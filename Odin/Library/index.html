@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="library.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body> 
+    <div id="container">
+        <div id="header">
+            <div id="page-title">
+                <i class="fa-sharp fa-solid fa-book"></i>Library</div>
+            <button id="add_book">Add Book</button>
+        </div>
+
+        <div id="library-container">
+            <div class="section-title">Your Books</div>
+            <div id="library">
+            </div>
+        </div>
+
+        
+
+        <!-- <div id="footer">
+            
+        </div> -->
+
+    </div>    
+
+    <dialog id="userDialog">
+        <form method="dialog">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="author">Author</label>
+            <input type="author" id="author" name="author" required>
+
+            <label for="noPages">Pages Read</label>
+            <input type="number" id="noPages" name="noPages" required>
+
+            <label for="finished">Finished</label>
+            <input type="checkbox" id="finished" name="finished">
+
+        
+
+            <div style="margin-top: 20px;">
+                <button id="cancelButton">Cancel</button>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </dialog>
+</body>
+</html>
